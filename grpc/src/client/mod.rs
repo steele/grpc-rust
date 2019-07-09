@@ -87,9 +87,14 @@ impl<'a, T: tls_api::TlsConnector> ClientBuilder<'a, T> {
                 builder.set_addr((host, port))?;
                 (host, Some(port))
             }
+            #[cfg(unix)]
             ClientBuilderType::Unix { socket } => {
                 builder.set_unix_addr(socket)?;
                 (socket, None)
+            }
+            #[cfg(not(unix))]
+            ClientBuilderType::Unix { socket } => {
+                return Err(error::Error::Other("No unix socket support"));
             }
         };
         builder.event_loop = self.event_loop;
