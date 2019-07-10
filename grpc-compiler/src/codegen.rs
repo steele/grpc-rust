@@ -1,9 +1,9 @@
 use std::collections::HashMap;
 
 use protobuf;
-use protobuf::compiler_plugin;
+use protobuf_codegen::compiler_plugin;
 use protobuf::descriptor::*;
-use protobuf::descriptorx::*;
+use protobuf_codegen::descriptorx::*;
 use protobuf_codegen::code_writer::CodeWriter;
 
 /// Adjust method name to follow the rust's style.
