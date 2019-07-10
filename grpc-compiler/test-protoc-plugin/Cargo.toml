@@ -6,7 +6,7 @@ publish = false
 
 [dependencies]
 tls-api         = "0.2.*"
-protobuf        = "2"
+protobuf        = "3"
 grpc            = { path = "../../grpc" }
 grpc-protobuf   = { path = "../../grpc-protobuf" }
 futures-cpupool = "0.1.*"

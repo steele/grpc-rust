@@ -10,7 +10,7 @@ readme = "../README.md"
 keywords = ["grpc"]
 
 [dependencies]
-protobuf        = { version = "2", features = ["with-bytes"] }
+protobuf        = { version = "3", features = ["with-bytes"] }
 grpc            = { version = "0.7.0", path = "../grpc" }
 bytes           = "0.4"
 
